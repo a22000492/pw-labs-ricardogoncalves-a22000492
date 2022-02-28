@@ -1,1 +1,1 @@
-https://a22000492-pw-lab1.herokuapp.com/
+http://pw-labs-ricardogoncalves-a2200.herokuapp.com/
