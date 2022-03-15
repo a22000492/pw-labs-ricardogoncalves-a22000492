@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 3 - Quizz</title>
+  <meta name="author" content="Ana Maria">
+  <meta name="keywords" content="palavras chave">
+  <meta name="description" content="Website sobre Lisboa">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+  <link rel="stylesheet" href="../estilos.css">
+</head>
+<body>
+  <header>
+    <h3>Quizz</h3>
+    <p>Nesta página será feito um quizz acerca de Lisboa.</p>
+  </header>
+  <nav>
+    <p><a href="index.html">Introdução à programação Web</a> <a href="../index.html">Laboratórios PW</a></p>
+  </nav>
+  <main>
+    <section>
+      <form method="POST" action="mailto:ricardo.goncalves252@gmail.com" enctype="multipart/form-data">
+        <fieldset>
+          <legend>
+            Quizz sobre Lisboa
+          </legend> 
+          <fieldset>
+            <legend>Info</legend>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="ex: Ricardo" required>
+
+            <label for="apelido">Apelido</label>
+            <input type="text" id="apelido" name="apelido" placeholder="ex: Gonçalves" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="example@example.com" autocomplete="email" required>
+          </fieldset>
+          <fieldset>
+            <legend>Perguntas</legend>
+            <label for="arco">Quando foi construido o arco da Praça de Espanha?</label>
+            <input type="date" id="arco" name="arco" min="1700-01-01" max="1800-01-01">
+
+            <label for="praca">Qual a cor da Praça do Comércio?</label>
+            <input type="color" id="praca" name="praca">
+
+            <label for="armazens">Em que ano foram construídos os Armazéns do Chiado?</label>
+            <input type="number" id="armazens" name="armazens">
+            
+            <label for="armazens">Em que ano foram construídos os Armazéns do Chiado?</label>
+            <input type="number" id="armazens" name="armazens">
+
+            <p>Qual o ano do terramoto de Lisboa:</p>
+            <input type="radio" id="terramoto1" name="terramoto" value="1655">
+            <label for="terramoto1">1655</label>
+            <input type="radio" id="terramoto2" name="terramoto" value="1755">
+            <label for="terramoto2">1755</label>  
+            <input type="radio" id="terramoto3" name="terramoto" value="1855">
+            <label for="terramoto3">1855</label>
+
+            <label for="transportes">Qualidade dos transportes publicos: (na sua opinião)</label>
+            <input type="range" id="transportes" name="transportes" min="0" max="100">
+
+            <input type="checkbox" id="pontes" name="pontes" checked>
+            <label for="pontes">Tem 2 pontes?</label>
+
+            <label for="aeroporto">Qual o nome do aeroporto?</label>
+            <input type="text" id="aeroporto" name="aeroporto">
+
+            <label for="comentario">Comentário pessoal acerca da cidade</label>
+            <textarea id="aeroporto" name="aeroporto" rows="4" cols="50" maxlength="500"></textarea>
+          </fieldset>
+        </fieldset>
+        
+        <input type="submit" value="Enviar" class="btn">
+      </form> 
+      
+    </section>
+  </main>
+  <footer>
+    <p>Ricardo Gonçalves | a22000492 | Universidade Lusófona de Humanidades e Tecnologias | 2º Ano</p>
+  </footer>
+</body>
+</html>
