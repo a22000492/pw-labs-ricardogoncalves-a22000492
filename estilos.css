@@ -60,3 +60,38 @@ fieldset label {
 img, iframe {
   border: 2px solid black;
 }
+
+.flex {
+  display: flex;
+}
+
+.capitais {
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: space-around;
+  background-color: #abdbe3;
+  padding: 50px;
+}
+
+.capitais > div {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px #888;
+  margin: 10px;
+}
+
+.capitais img {
+  border-radius: 20px 0 0 20px;
+  height: 100%;
+}
+
+.capitais div div:last-child {
+  width: 150px;
+  display: flex;
+  background-color: white;
+  padding: 20px;
+  border-radius: 0 20px 20px 0;
+  justify-content: center;
+  align-items: center;
+}
