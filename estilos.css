@@ -95,3 +95,43 @@ img, iframe {
   justify-content: center;
   align-items: center;
 }
+
+.menu {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+.menu a:last-child {
+  margin-left: auto;
+}
+
+.menu a {
+  padding: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu a:hover {
+  background-color: #b4b4b4;
+  font-weight: bold;
+}
+
+.dicas {
+  width: 100%;
+  background-color: white;
+}
+
+.dicas div {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.dicas > div {
+  display: flex;
+  width: 25%;
+  justify-content: space-around;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px #888;
+  margin: 10px;
+}
