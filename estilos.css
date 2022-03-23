@@ -24,7 +24,29 @@ nav a {
 }
 
 nav a:hover {
-  font-weight: 600;
+  font-weight: bold;
+}
+
+.home-menu {
+  display: flex;
+  padding: 1rem 0.2rem;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.home-menu a {
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.home-footer {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.home-footer p {
+  color: black;
 }
 
 .btn {
@@ -63,6 +85,10 @@ img, iframe {
 
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
 }
 
 .capitais {
@@ -134,4 +160,71 @@ img, iframe {
   border-radius: 20px;
   box-shadow: 5px 5px 15px #888;
   margin: 10px;
+}
+
+.destinos {
+  background-color: #abdbe3;
+}
+
+.destinos > div {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.destinos h5 {
+  padding-bottom: 300px;
+}
+
+.destinos h4, .destinos h5, .destinos p {
+  margin: 0;
+  color: white;
+  font-weight: bold;
+}
+
+.aveiro {
+  background-image: url('lab4/images/destinos/aveiro.jpg');
+  grid-area: aveiro;
+}
+
+.evora {
+  background-image: url('lab4/images/destinos/evora.jpg');
+  grid-area: evora;
+}
+
+.lisboa {
+  background-image: url('lab4/images/destinos/lisboa.jpg');
+  grid-area: lisboa;
+}
+
+.porto {
+  background-image: url('lab4/images/destinos/porto.jpg');
+  grid-area: porto;
+}
+
+.viseu {
+  background-image: url('lab4/images/destinos/viseu.jpg');
+  grid-area: viseu;
+}
+
+@media only screen and (min-width: 900px) {
+  .destinos {
+    gap: 1rem;
+    grid-template-areas:
+      'aveiro evora lisboa'
+      'porto porto viseu';
+  }
+}
+
+@media only screen and (max-width: 899px) {
+  .destinos {
+    gap: 1rem;
+    grid-template-areas:
+      'aveiro evora'
+      'lisboa viseu'
+      'porto porto';
+  }
 }
