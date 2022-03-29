@@ -87,6 +87,10 @@ img, iframe {
   display: flex;
 }
 
+.c-white {
+  color: white;;
+}
+
 .grid {
   display: grid;
 }
@@ -227,4 +231,34 @@ img, iframe {
       'lisboa viseu'
       'porto porto';
   }
+}
+
+.lab5-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  background-image: url(lab5/images/europa.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+.lab5-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  height: 1fr;
+}
+
+.lab5-parallax {
+  background-image: url(lab5/images/europa.jpg);
+  min-height: 200px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
