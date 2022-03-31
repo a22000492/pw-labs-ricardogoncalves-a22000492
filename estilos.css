@@ -252,6 +252,7 @@ img, iframe {
   width: 100%;
   background: white;
   height: 1fr;
+  z-index: 2;
 }
 
 .lab5-parallax {
@@ -262,3 +263,68 @@ img, iframe {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.fotos {
+  display: grid;
+  gap: 10px 10px;
+  margin: 0 10vw;
+  z-index: 1;
+}
+
+.fotos img { 
+  width: 100%;
+  transition: opacity 200ms;
+}
+
+.fotos img:hover {
+  opacity: .5;
+}
+
+.fotos div {
+  position: relative;
+  background-color: black;
+}
+
+.fotos div:hover p {
+  opacity: 1;
+}
+
+.fotos p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+@media only screen and (min-width: 901px) {
+  .fotos {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .fotos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .fotos {
+    grid-template-columns: 1fr;
+  }
+}
+
+.home-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  background-image: url(https://source.unsplash.com/QRQHjryZBQM/1920x1080);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
