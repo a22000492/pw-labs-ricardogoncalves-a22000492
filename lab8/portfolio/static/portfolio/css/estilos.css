@@ -22,3 +22,18 @@ footer {
   padding: 0 2vw;
   align-items: center;
 }
+
+.projetos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.projetos div {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid black;
+}

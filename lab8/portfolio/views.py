@@ -1,26 +1,27 @@
 from datetime import datetime
 
-from django.shortcuts import render
-
 # Create your views here.
 from django.shortcuts import render
 
 def home_page_view(request):
-    agora = datetime.datetime.now()
+    agora = datetime.now()
     context = {
         'data': agora.date,
     }
 
     return render(request, 'portfolio/home.html', context)
 
-def apresentacao(request):
+def apresentacao_page_view(request):
     return render(request, 'portfolio/apresentacao.html')
 
-def competencias(request):
+def competencias_page_view(request):
     return render(request, 'portfolio/competencias.html')
 
-def formacao(request):
+def formacao_page_view(request):
     return render(request, 'portfolio/formacao.html')
 
-def projetos(request):
+def projetos_page_view(request):
     return render(request, 'portfolio/projetos.html')
+
+def licenciatura_page_view(request):
+    return render(request, 'portfolio/licenciatura.html')
