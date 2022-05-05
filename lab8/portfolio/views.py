@@ -12,3 +12,15 @@ def home_page_view(request):
     }
 
     return render(request, 'portfolio/home.html', context)
+
+def apresentacao(request):
+    return render(request, 'portfolio/apresentacao.html')
+
+def competencias(request):
+    return render(request, 'portfolio/competencias.html')
+
+def formacao(request):
+    return render(request, 'portfolio/formacao.html')
+
+def projetos(request):
+    return render(request, 'portfolio/projetos.html')
