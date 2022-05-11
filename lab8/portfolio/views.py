@@ -1,5 +1,9 @@
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 from datetime import datetime
 from matplotlib import pyplot as plt
+from .models import Post, PontuacaoQuizz
+from .forms import PostForm
 
 # Create your views here.
 from django.shortcuts import render
@@ -28,9 +32,13 @@ def licenciatura_page_view(request):
   return render(request, 'portfolio/licenciatura.html')
 
 def blog_page_view(request):
+  form = PostForm(request.POST or None)
+  if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('portfolio:blog'))
   context = {
       'posts': Post.objects.all(),
-      'form': PostForm()
+      'form': form
   }
   return render(request, 'portfolio/blog.html', context)
 
@@ -38,22 +46,26 @@ def web_page_view(request):
   return render(request, 'portfolio/web.html')
 
 def quizz(request):
-  if request.method == 'POST'
+  if request.method == 'POST':
     n = request.POST['nome']
     p = pontuacao_quizz(request)
     r = PontuacaoQuizz(nome=n, pontuacao=p)
     r.save()
     desenha_grafico_resultados()
 
+def pontuacao_quizz(request):
+  if request.method == 'POST':
+    return 3
+
 def desenha_grafico_resultados():
-  pontuacoes = Psorted(PontuacaoQuizz.objects.all(), key=lambda objeto:objeto.pontuacao, reverse=True)
+  pontuacoes = sorted(PontuacaoQuizz.objects.all(), key=lambda objeto:objeto.pontuacao, reverse=True)
   nomes_x = []
   pontuacao_y = []
   for nome,pontuacao in pontuacoes:
-  nomes_x.append(nome)
-  pontuacao_y.append(pontuacao)
+    nomes_x.append(nome)
+    pontuacao_y.append(pontuacao)
   nomes_x.reverse()
   pontuacao_y.reverse()
   plt.barh(nomes_x, pontuacao_y)
   plt.show()
-  plt.savefig('static/images/pontuacoes.png ', bbox_inches='tight'):
+  plt.savefig('static/images/pontuacoes.png ', bbox_inches='tight')

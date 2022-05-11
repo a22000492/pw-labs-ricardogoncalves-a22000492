@@ -5,7 +5,7 @@ from .models import Post
 
 class PostForm(ModelForm):
   class Meta:
-    model = Tarefa
+    model = Post
     fields = '__all__'
     widgets = {
     }
